@@ -1,4 +1,4 @@
-# kcentr-ui
+# wysiwig-editor
 
 ## Project setup
 ```

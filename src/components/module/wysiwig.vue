@@ -37,7 +37,7 @@ export default {
       })
     },
 
-    imageLoad() {
+    loadMode() {
       const urlUpload = confirm('Вы хотите загрузить изображение с URL-адреса?')
       if (urlUpload) {
         const link = prompt('Введите URL адрес изображения')
@@ -58,7 +58,7 @@ export default {
         document.execCommand('insertImage', false, this.file);
       }
     },
-    copyHTML(){
+    copyHTML() {
       const html = this.$refs.editor.innerHTML
       navigator.clipboard.writeText(html).then(() => {
         alert("HTML документа успешно скопирован");
@@ -71,16 +71,41 @@ export default {
 <template>
   <div>
     <!--File Uploader Input-->
-    <input hidden ref="output" type="file" accept="file" @input="fileLoad($event)">
+    <input
+        hidden
+        ref="output"
+        type="file"
+        accept="file"
+        @input="fileLoad($event)">
 
     <!--Editor Controls-->
     <div :class="$style.controls">
-      <BaseBtn title="Назад" icon-name="arrow-left" @mousedown.prevent="undo()"/>
-      <BaseBtn title="Вперед" icon-name="arrow-right" @mousedown.prevent="redo()"/>
-      <BaseBtn title="Сделать заголовком" icon-name="text" @mousedown.prevent="applyHeading()"/>
-      <BaseBtn title="Сделать абзацев" icon-name="text-two" @mousedown.prevent="applyParagraph()"/>
-      <BaseBtn title="Загрузить изображение" icon-name="image" @mousedown.prevent="imageLoad()"/>
-      <BaseBtn name="image" mode='text' @mousedown.prevent="copyHTML()">Скопировать HTML</BaseBtn>
+      <BaseBtn
+          title="Назад"
+          icon-name="arrow-left"
+          @mousedown.prevent="undo()"/>
+      <BaseBtn
+          title="Вперед"
+          icon-name="arrow-right"
+          @mousedown.prevent="redo()"/>
+      <BaseBtn
+          title="Сделать заголовком"
+          icon-name="text"
+          @mousedown.prevent="applyHeading()"/>
+      <BaseBtn
+          title="Сделать абзацев"
+          icon-name="text-two"
+          @mousedown.prevent="applyParagraph()"/>
+      <BaseBtn
+          title="Загрузить изображение"
+          icon-name="image"
+          @mousedown.prevent="loadMode()"/>
+      <BaseBtn
+          name="image"
+          mode='text'
+          @mousedown.prevent="copyHTML()">
+        Скопировать HTML
+      </BaseBtn>
     </div>
 
     <!--Editor-->
@@ -99,22 +124,22 @@ export default {
 .controls {
   display: flex;
   flex-wrap: wrap;
-  gap: rem(12);
   margin-bottom: rem(31);
+  gap: rem(12);
 }
 
 .editor {
+  padding: rem(10);
   border-radius: rem(8);
   text-align: left;
-  padding: rem(10);
   transition: 0.125s linear;
 
-  &:focus-visible{
+  &:focus-visible {
     outline: unset;
     box-shadow: var(--base-box-shadow);
   }
 
-  &:hover{
+  &:hover {
     outline: unset;
     box-shadow: var(--base-box-shadow);
   }

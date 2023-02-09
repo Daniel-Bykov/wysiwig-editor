@@ -1,10 +1,3 @@
-<template>
-  <svg :class="$style.icon" xmlns="http://www.w3.org/2000/svg">
-    <title v-if="title">{{ title }}</title>
-    <use :xlink:href="iconPath" xmlns:xlink="http://www.w3.org/1999/xlink"/>
-  </svg>
-</template>
-
 <script>
 export default {
   name: 'SvgIcon',
@@ -13,10 +6,6 @@ export default {
       type: String,
       required: true
     },
-    title: {
-      type: String,
-      default: null
-    }
   },
   computed: {
     iconPath() {
@@ -29,6 +18,12 @@ export default {
   }
 };
 </script>
+
+<template>
+  <svg :class="$style.icon" xmlns="http://www.w3.org/2000/svg">
+    <use :xlink:href="iconPath" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </svg>
+</template>
 
 <style lang="scss" module>
 .icon {
