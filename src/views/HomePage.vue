@@ -1,6 +1,6 @@
 <script>
 import BaseContainer from "@/components/base/Container";
-import ModuleWysiwig from "@/components/Module/wysiwig";
+import ModuleWysiwig from "@/components/module/wysiwig";
 
 export default {
   name: "HomePage",

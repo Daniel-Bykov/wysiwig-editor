@@ -93,7 +93,7 @@ export default {
           icon-name="text"
           @mousedown.prevent="applyHeading()"/>
       <BaseBtn
-          title="Сделать абзацев"
+          title="Сделать абзацем"
           icon-name="text-two"
           @mousedown.prevent="applyParagraph()"/>
       <BaseBtn

@@ -7,6 +7,8 @@ export default {
     iconName: {
       type: String,
     },
+    iconWidth: Number,
+    iconHeight:Number,
     mode: {
       type: String,
       default: 'button' // button, text
@@ -19,6 +21,8 @@ export default {
   <button :class="[mode === 'button' ? $style.btn : $style.text ]">
     <SvgIcon
         :name="iconName"
+        :width="iconWidth"
+        :height="iconHeight"
         v-if="mode === 'button'"/>
     <slot></slot>
   </button>
@@ -26,7 +30,7 @@ export default {
 
 <style lang="scss" module>
 .btn {
-  padding: rem(5);
+  padding: rem(10);
   border-radius: rem(4);
   cursor: pointer;
   border: unset;

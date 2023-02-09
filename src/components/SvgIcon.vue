@@ -6,6 +6,14 @@ export default {
       type: String,
       required: true
     },
+    width:{
+      type: Number,
+      default: 20
+    },
+    height:{
+      type: Number,
+      default: 20
+    }
   },
   computed: {
     iconPath() {
@@ -20,7 +28,10 @@ export default {
 </script>
 
 <template>
-  <svg :class="$style.icon" xmlns="http://www.w3.org/2000/svg">
+  <svg :class="$style.icon"
+       xmlns="http://www.w3.org/2000/svg"
+       :width="width"
+       :height="height">
     <use :xlink:href="iconPath" xmlns:xlink="http://www.w3.org/1999/xlink"/>
   </svg>
 </template>
@@ -28,7 +39,5 @@ export default {
 <style lang="scss" module>
 .icon {
   fill: currentColor;
-  max-height: 24px;
-  width: 24px;
 }
 </style>
