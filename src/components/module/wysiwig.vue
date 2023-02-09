@@ -34,6 +34,7 @@ export default {
     format() {
       this.$refs.editor.querySelectorAll('.paragraph').forEach(item => {
         item.style.display = "block"
+        item.style.margin = "20px 0px"
       })
     },
 
