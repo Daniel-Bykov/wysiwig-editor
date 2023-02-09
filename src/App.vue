@@ -5,7 +5,7 @@
 <style lang="scss">
 
 body{
-  background-color: #1E1E1E;
+  background-color: var(--background-color);
   color: whitesmoke;
 }
 #app {
