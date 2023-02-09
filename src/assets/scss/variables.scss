@@ -1,39 +1,9 @@
-
 @import 'utils';
 
-
-// Colors
-$color-accent: #E50043;
-$color-accent--light: #FA064D;
-$color-accent--dark:#CF003D;
-
-$color-dark:#303B4A;
-$color-white: #FFFFFF;
-
-$color-purple: #792573;
-$color-purple--light: #973890;
-$color-purple--dark: #6A2065;
-
-$color-blue: #4579E5;
-$color-blue--light: #598FFF;
-$color-blue--dark: #3565C8;
-
-$color-yellow: #FFCF52;
-
-$color-gray--600: #767D85;
-$color-gray--500: #A8AEB4;
-$color-gray--400: #C1C5C9;
-$color-gray--300: #DBDDE2;
-$color-gray--200: #E9EBF0;
-$color-gray--100: #E9ECEE;;
-
-$bg:#F7F7F8;
-$bg--dark:#0D1B2F;
-
-$wireframe:#393939;
-$wireframe--second:#BCBCBC;
-$wireframe--light:#E7E7E7;;
-$wireframe--white:#FFFFFF;
+:root{
+  --base-box-shadow: 0px 0px 9px -3px rgb(162, 158, 158);
+  --font-family: 'Roboto', sans-serif;
+}
 
 
 

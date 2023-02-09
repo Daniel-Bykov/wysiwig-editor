@@ -1,14 +1,28 @@
-html,
-body {
-  height: 100%;
+:root {
   scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+{
+  height: 100%;
 }
 
 body {
   margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(15);
+  line-height: rem(23);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
